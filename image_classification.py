@@ -21,7 +21,7 @@ def preprocess_image(img):
 
 
 def load_image():
-    uploaded_file = st.file_uploader(label='Выберите изображение для распознавания в формате jpg')
+    uploaded_file = st.file_uploader(label='формат jpg')
     if uploaded_file is not None:
         image_data = uploaded_file.getvalue()
         st.image(image_data)
@@ -39,7 +39,7 @@ def print_predictions(preds):
 model = load_model()
 
 
-st.title('Классификации изображений в Streamlit')
+st.title('Классификация изображений в Streamlit')
 img = load_image()
 result = st.button('Распознать изображение')
 if result:
